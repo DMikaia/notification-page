@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
-
 :root {
   /* * Primary */
 
@@ -19,10 +17,119 @@
   --Dark-grayish-blue: hsl(219, 12%, 42%);
   --Very-dark-blue: hsl(224, 21%, 14%);
 
-  font-family: "Plus Jakarta Sans", sans-serif;
   font-optical-sizing: auto;
-  line-height: normal;
+  font-weight: 500;
+  line-height: 1.5;
 }
 
-body {
+@layer components {
+  .main {
+    @apply flex w-full flex-col h-full items-center justify-center;
+  }
+
+  .main-color {
+    @apply text-[color:var(--Dark-grayish-blue)] bg-[color:var(--Very-light-grayish-blue)];
+  }
+
+  .sm-main {
+    @apply p-0 text-sm;
+  }
+
+  .md-main {
+    @apply p-8 text-base;
+  }
+
+  .main-container {
+    @apply justify-evenly items-center bg-[color:var(--White)] gap-4 flex flex-col;
+  }
+
+  .sm-main-container {
+    @apply w-full p-6 h-full;
+  }
+
+  .md-main-container {
+    @apply w-176 rounded-xl p-6;
+  }
+
+  .main-container-header {
+    @apply w-full flex justify-between items-center;
+  }
+
+  .main-container-title {
+    @apply font-extrabold text-[var(--Very-dark-blue)] flex gap-4 justify-center items-center;
+  }
+
+  .notification-number {
+    @apply bg-[color:var(--Blue)] text-[color:var(--White)] pl-2.5 pr-2.5 pt-0.5 pb-0.5 rounded-md;
+  }
+
+  .notification-container {
+    @apply flex flex-col gap-2 w-full;
+  }
+
+  .text-action {
+    @apply cursor-pointer;
+  }
+
+  .text-action:hover,
+  .text-action:focus {
+    @apply text-[color:var(--Blue)] duration-200 ease-linear;
+  }
+
+  .notification-box {
+    @apply flex gap-4 items-start cursor-pointer;
+  }
+
+  .sm-notification {
+    @apply p-3;
+  }
+
+  .md-notification {
+    @apply p-4 pl-6 pr-6;
+  }
+
+  .unread-notification {
+    @apply bg-[color:var(--Light-grayish-blue-1)] rounded-lg;
+  }
+
+  .dot {
+    @apply w-2.5 h-2.5 inline-block rounded-full bg-[color:var(--Red)];
+  }
+
+  .notification-info {
+    @apply flex flex-col gap-2 w-full;
+  }
+
+  .text-container {
+    @apply text-[color:var(--Dark-grayish-blue)];
+  }
+
+  .name {
+    @apply font-extrabold text-[color:var(--Very-dark-blue)] text-action;
+  }
+
+  .link {
+    @apply text-[color:var(--Dark-grayish-blue)] font-extrabold text-action;
+  }
+
+  .group {
+    @apply text-[color:var(--Blue)];
+  }
+
+  .message {
+    @apply duration-200 ease-linear mt-2 p-2 border-2 rounded-md;
+  }
+
+  .message-color {
+    @apply border-[color:var(--Light-grayish-blue-1)] text-[color:var(--Dark-grayish-blue)];
+  }
+
+  .message:hover,
+  .message:focus {
+    @apply bg-[color:var(--Light-grayish-blue-2)] border-transparent;
+  }
+
+  .time {
+    @apply text-[color:var(--Grayish-blue)];
+  }
 }

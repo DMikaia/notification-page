@@ -7,7 +7,15 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      width: {
+        "176": "44rem",
+      },
+      screens: {
+        sm: "375px",
+        md: "768px",
+      },
+    },
   },
   plugins: [],
 };
